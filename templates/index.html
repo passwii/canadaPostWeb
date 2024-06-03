@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Postal Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            width: 50%;
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="file"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #tooltip {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: blue;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        #tooltip .icon {
+            margin-right: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>加拿大邮编分区助手</h1>
+    <form method="post" enctype="multipart/form-data">
+      <label for="file">待处理 Excel:</label>
+      <input type="file" name="file" id="file" required><br><br>
+      <input type="submit" value="Upload">
+    </form>
+    <div id="tooltip" onClick="alert('有问题联系Yawei 188-9696-8181')">
+        <span class="icon">📱</span>
+        <span>问题联系</span>
+    </div>
+  </body>
+</html>
